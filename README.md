@@ -1,7 +1,4 @@
-
-### (UNDER DEVELOPMENT!)
-
-![Quake 2 logo](q2logo.png)
+![Quake 2 logo](https://raw.githubusercontent.com/FoRTu/docker-quake2-opentdm/master/q2logo.png)
 
 # Quake 2 OpenTDM Dedicated Server
 
