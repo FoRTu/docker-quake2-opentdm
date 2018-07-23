@@ -1,3 +1,6 @@
+
+### (UNDER DEVELOPMENT!)
+
 ![Quake 2 logo](q2logo.png)
 
 # Quake 2 OpenTDM Dedicated Server
