@@ -1,8 +1,8 @@
 FROM debian:stable-slim
 
 LABEL maintainer="FoRTu" \
-maintainet.email="mikelfortuna@gmail.com" \
-maintainer.website="https://fortu.io/"
+maintainet.email="me@fortu.io" \
+maintainer.website="https://github.com/FoRTu/docker-quake2-opentdm"
 
 WORKDIR /opt/quake2-opentdm-server
 
@@ -23,12 +23,11 @@ ENV Q2_RESPAWN_TIME="5"
 # Install Updates + Quake2 & OpenFFA MOD:
 RUN apt update && \
 apt upgrade -y && \
-apt -y install curl apt-transport-https gnupg && \
-curl -L "https://apt.fortu.io/repo.key" | apt-key add - && \
-echo "deb https://apt.fortu.io/ stretch main contrib non-free" | tee -a /etc/apt/sources.list && \
-apt update && \
-apt install -y quake2-opentdm-server && \
-apt purge -y curl apt-transport-https gnupg && \
+apt -y install wget && \
+wget "http://files.fortu.io/quake2-opentdm-server_8012-7402f92_amd64.deb" && \
+dpkg -i quake2-opentdm-server_8012-7402f92_amd64.deb && \
+rm quake2-opentdm-server_8012-7402f92_amd64.deb && \
+apt purge -y wget && \
 apt-get -y autoclean && \
 apt-get -y autoremove && \
 rm -rf \
