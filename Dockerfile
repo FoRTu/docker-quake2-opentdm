@@ -24,7 +24,7 @@ ENV Q2_RESPAWN_TIME="5"
 RUN apt update && \
 apt upgrade -y && \
 apt -y install wget && \
-wget "http://files.fortu.io/quake2-opentdm-server_8012-7402f92_amd64.deb" && \
+wget "https://files.fortu.io/quake2-opentdm-server_8012-7402f92_amd64.deb" && \
 dpkg -i quake2-opentdm-server_8012-7402f92_amd64.deb && \
 rm quake2-opentdm-server_8012-7402f92_amd64.deb && \
 apt purge -y wget && \
